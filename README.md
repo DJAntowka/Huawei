@@ -10,7 +10,7 @@ class Main(Frame):
 
     def build(self):
         self.formula = "0"
-        self.lbl = Label(text=self.formula, font=("Times New Roman", 21, "bold"), bg="#000", foreground="#FFF")
+        self.lbl = Label(text=self.formula, font=("Arial", 17, "bold"), bg="#000", foreground="#FFF")
         self.lbl.place(x=11, y=50)
 
         btns = [
@@ -39,15 +39,15 @@ class Main(Frame):
         if operation == "C":
             self.formula = ""
         elif operation == "DEL":
-            self.formula = self.formula[0:-1]
+            self.formula = self.formul[0:-1]
         elif operation == "X^2":
-            self.formula = str((eval(self.formula))**2)
+            self.formula = str((eva(self.formula))**2)
         elif operation == "=":
-            self.formula = str(eval(self.formula))
+            self.formula = str(eva(self.formula))
         else:
             if self.formula == "0":
                 self.formula = ""
-            self.formula += operation
+            self.formula += operations
         self.update()
 
     def update(self):
@@ -60,8 +60,8 @@ if __name__ == '__main__':
     root = Tk()
     root["bg"] = "#000"
     root.geometry("485x550+200+200")
-    root.title("Калькулятор")
+    root.title("Калькулятор от Ануара")
     root.resizable(False, False)
-    app = Main(root)
+    app = Main(roots)
     app.pack()
     root.mainloop()
